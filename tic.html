@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tic-Tac-Toe</title>
+        <link rel="stylesheet" href="toe.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>  
+    </head>
+    <body>
+        <section class="section">
+        <h1 class="bodyTitle">Tic-Tac-Toe</h1>
+
+        <div class="scoresHolder">
+            <h3>Player 1 Score: <span id="p1-score">0</span></h3>
+            <h3>Player 2 Score: <span id="p2-score">0</span></h3>
+            <h3>Tie: <span id="tie">0</span></h3>
+            <h3>turn: <span id="turn">X</span></h3>
+        </div>
+    </section>
+    <section class="section2">
+        <div class="ticHolder">
+            <div class="row row-1">
+                <div class="box col-1" id="b1"></div>
+                <div class="box col-2" id="b2"></div>
+                <div class="box col-3" id="b3"></div>
+            </div>
+            <div class="row row-2">
+                <div class="box col-1" id="b4"></div>
+                <div class="box col-2" id="b5"></div>
+                <div class="box col-3" id="b6"></div>
+            </div>
+            <div class="row row-3">
+                <div class="box col-1" id="b7"></div>
+                <div class="box col-2" id="b8"></div>
+                <div class="box col-3" id="b9"></div>
+            </div>
+        </div>
+    </section>
+    <div class="btnHolder">
+        <button id="btn1">Reload</button>
+    </div>
+    <script src="tac.js"></script>
+    </body>
+</html>
