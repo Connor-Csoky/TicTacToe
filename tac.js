@@ -5,27 +5,36 @@ var turn = 1
 var counter = 0
 
 $('.box').click(function(){
-    if(turn === 1){
-        $(this).text('X')
-        $(this).addClass('X')
-        turn = 2
-        $('#turn').text('O')
-        counter += 1
-        checkWin()
+    if ($(this).hasClass('X')){
+        alert("already placed")
     }
-    else {
-        $(this).text('O')
-        $(this).addClass('O')
-        turn = 1
-        $('#turn').text('X')
-        counter += 1
-        checkWin()
+    else if ($(this).hasClass('O')){
+        alert("already placed")
+    }
+    else{
+        if(turn === 1) {
+            $(this).text('X')
+            $(this).addClass('X')
+            turn = 2
+            $('#turn').text('O')
+            counter += 1
+            checkWin()
+        }
+        else {
+            $(this).text('O')
+            $(this).addClass('O')
+            turn = 1
+            $('#turn').text('X')
+            counter += 1
+            checkWin()
+        }
     }
 
     
 })
 
 $('#btn1').click(function(){
+    $('.box').removeClass('X O')
     $('.box').empty()
     turn = 1
     $('#turn').text('X')

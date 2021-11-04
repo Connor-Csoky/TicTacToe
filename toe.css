@@ -62,5 +62,15 @@
     padding: 20px;
 }
 
+if ($(this).hasClass('x')){
+    alert('Already placed')
+ }
+ else {
+     turn = 2
+     $('#turn').text('O')
+     counter += 1
+     checkWin()
+ }
+
 
 
