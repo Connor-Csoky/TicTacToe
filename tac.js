@@ -22,7 +22,7 @@ $('.box').click(function(){
 })
 
 $('#btn1').click(function(){
-    window.location.reload()
+    $('.box').empty()
 })
 
 
@@ -31,11 +31,13 @@ function checkWin(){
         console.log('test')
         player1 += 1
         $('#p1-score').text(player1)
+        $('.box').removeClass('X O')
     }
     else if($(".row-1 .box.O").length === 3 || $(".row-2 .box.O").length === 3 || $(".row-3 .box.O").length ===3 || $(".col-1.O").length ===3 || $(".col-2.O").length === 3 || $(".col-3.O").length ===3 || $('#b1').hasClass('O') && $('#b5').hasClass('O') && $('#b9').hasClass('O') || $('#b3').hasClass('O') && $('#b5').hasClass('O') && $('#b7').hasClass('O')){
         console.log('test2')
         player2 += 1
         $('#p2-score').text(player2)
+        $('.box').removeClass('X O')
     }
 }
 
