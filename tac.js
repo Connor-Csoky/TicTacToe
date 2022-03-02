@@ -46,17 +46,29 @@ function checkWin(){
         player1 += 1
         $('#p1-score').text(player1)
         counter = 0
+        $('.box').removeClass('X O')
+        $('.box').empty()
+        turn = 1
+        $('#turn').text('X')
     }
     else if($(".row-1 .box.O").length === 3 || $(".row-2 .box.O").length === 3 || $(".row-3 .box.O").length ===3 || $(".col-1.O").length ===3 || $(".col-2.O").length === 3 || $(".col-3.O").length ===3 || $('#b1').hasClass('O') && $('#b5').hasClass('O') && $('#b9').hasClass('O') || $('#b3').hasClass('O') && $('#b5').hasClass('O') && $('#b7').hasClass('O')){
         console.log('test2')
         player2 += 1
         $('#p2-score').text(player2)
         counter = 0
+        $('.box').removeClass('X O')
+        $('.box').empty()
+        turn = 1
+        $('#turn').text('X')    
     }
     else if(counter === 9){
         tie += 1
         $('#tie').text(tie)
         counter = 0
+        $('.box').removeClass('X O')
+        $('.box').empty()
+        turn = 1
+        $('#turn').text('X')    
     }
     
 }
